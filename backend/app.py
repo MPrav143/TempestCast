@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # RapidAPI Configuration
-RAPIDAPI_KEY = os.getenv('RAPIDAPI_KEY', 'your_rapidapi_key_here')
+RAPIDAPI_KEY = os.getenv('RAPIDAPI_KEY', '4cc3b00fb9msh7930212c14d8c07p13aa7ejsna0f7244e674c')
 RAPIDAPI_HOST = 'visual-crossing-weather.p.rapidapi.com'
 
 def get_outfit_suggestion(weather_data):
@@ -299,7 +299,7 @@ def health_check():
     return jsonify({
         'status': 'healthy', 
         'message': 'Weather API is running',
-        'api_key_set': bool(RAPIDAPI_KEY and RAPIDAPI_KEY != 'your_rapidapi_key_here')
+        'api_key_set': bool(RAPIDAPI_KEY and RAPIDAPI_KEY != '4cc3b00fb9msh7930212c14d8c07p13aa7ejsna0f7244e674c')
     })
 
 @app.route('/api/test-scenarios', methods=['GET'])
